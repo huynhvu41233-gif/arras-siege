@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arras Alliance - Lễ 01/05</title>
+    <style>
+        body { 
+            margin: 0; 
+            overflow: hidden; 
+            background-color: #cdcdcd; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        }
+        #ui { 
+            position: absolute; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+            text-align: center; 
+            background: rgba(255,255,255,0.95); 
+            padding: 40px; 
+            border-radius: 15px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3); 
+            border: 3px solid #34495e;
+            width: 400px;
+        }
+        h1 { color: #2c3e50; font-size: 28px; margin-bottom: 10px; }
+        .subtitle { color: #e74c3c; font-weight: bold; font-size: 18px; margin-bottom: 20px; }
+        .info { text-align: left; background: #ecf0f1; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+        .info p { margin: 8px 0; color: #333; font-size: 16px; }
+        .highlight { font-weight: bold; color: #d35400; }
+        .btn { 
+            background: #27ae60; 
+            color: white; 
+            border: none; 
+            padding: 15px 30px; 
+            font-size: 18px; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            font-weight: bold; 
+            transition: 0.2s;
+            width: 100%;
+        }
+        .btn:hover { background: #2ecc71; transform: scale(1.05); }
+    </style>
+</head>
+<body>
+    <div id="ui">
+        <h1>CỔNG VÀO ARRAS</h1>
+        <div class="subtitle">🔥 Máy Chủ Bất Tử - Lễ 01/05 🔥</div>
+        
+        <div class="info">
+            <p>🛡️ <b>Liên minh:</b> Long, Bảo, Hiếu</p>
+            <p>⚔️ <b>Chế độ:</b> Siege (Hell Mode) & Growth</p>
+            <p>⚠️ <b>Cảnh báo:</b> Boss đã được buff <span class="highlight">HP x100</span>. Tốc độ nâng cấp trong Growth siêu tốc.</p>
+        </div>
+
+        <button class="btn" onclick="enterGame()">KẾT NỐI SERVER...</button>
+    </div>
+
+    <!-- Background lưới giống Arras -->
+    <canvas id="bgCanvas"></canvas>
+
+    <script>
+        // Vẽ nền lưới caro cho giống game
+        const canvas = document.getElementById('bgCanvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        ctx.fillStyle = '#cdcdcd';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        ctx.strokeStyle = '#b9b9b9';
+        ctx.lineWidth = 1;
+        for(let i = 0; i < canvas.width; i += 30) {
+            ctx.beginPath(); ctx.moveTo(i, 0); ctx.lineTo(i, canvas.height); ctx.stroke();
+        }
+        for(let j = 0; j < canvas.height; j += 30) {
+            ctx.beginPath(); ctx.moveTo(0, j); ctx.lineTo(canvas.width, j); ctx.stroke();
+        }
+
+        function enterGame() {
+            let btn = document.querySelector('.btn');
+            btn.innerHTML = "ĐANG TẢI DỮ LIỆU BẢN ĐỒ...";
+            btn.style.background = "#f39c12";
+            
+            // Hiệu ứng load giả lập trước khi vào trận
+            setTimeout(() => {
+                alert("Server đã sẵn sàng! Đang chuyển hướng đồng đội...");
+                // Sau này bro có thể đổi dòng dưới thành link server game thực tế
+                btn.innerHTML = "ĐÃ VÀO TRẬN!";
+                btn.style.background = "#c0392b";
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
