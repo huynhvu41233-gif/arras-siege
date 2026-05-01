@@ -141,11 +141,19 @@
 <script>
 function confirmSelection() {
     const stats = document.getElementById('stats-panel');
-    stats.innerHTML = "🎯 ĐÃ KHÓA BUILD 9/9!<br>Sẵn sàng cùng Long, Bảo, Hiếu chiến Wave 51!";
+    stats.innerHTML = "🎯 ĐANG KẾT NỐI SERVER...<br>Sẵn sàng chiến Wave 51!";
     stats.style.background = "#6c5ce7";
+    
+    // Nhắc nhở Physician trước khi đi
     alert("Physician chú ý: Chỉ vượt vạch đỏ hồi máu Trụ khi đạt Level 90!");
+
+    // Đợi 1.5 giây rồi nhảy thẳng vào sảnh game Arras
+    setTimeout(() => {
+        window.location.href = "https://arras.io/#v=arras-siege"; 
+    }, 1500);
 }
-// Kích hoạt khi nhấn vào bảng
+
+// Kích hoạt khi nhấn vào bảng thông tin của Long, Bảo, Hiếu
 document.querySelector('.info').addEventListener('click', confirmSelection);
 </script>
 </body>
