@@ -81,18 +81,17 @@
         }
 
         function enterGame() {
-            let btn = document.querySelector('.btn');
-            btn.innerHTML = "ĐANG TẢI DỮ LIỆU BẢN ĐỒ...";
-            btn.style.background = "#f39c12";
-            
-            // Hiệu ứng load giả lập trước khi vào trận
-            setTimeout(() => {
-                alert("Server đã sẵn sàng! Đang chuyển hướng đồng đội...");
-                // Sau này bro có thể đổi dòng dưới thành link server game thực tế
-                btn.innerHTML = "ĐÃ VÀO TRẬN!";
-                btn.style.background = "#c0392b";
-            }, 2000);
-        }
+    let btn = document.querySelector('.btn');
+    btn.innerHTML = "ĐANG KẾT NỐI SERVER...";
+    btn.style.background = "#f39c12";
+
+    // Hiệu ứng và chuyển hướng thật
+    setTimeout(() => {
+        alert("Server Singapore 1 đã sẵn sàng! Chúc liên minh chiến thắng!");
+        // Dòng lệnh quan trọng nhất để vào game:
+        window.location.href = "https://arras.io/#v=arras-siege"; 
+    }, 1500);
+}
 </script>
 <!-- Thêm style này để bảng chỉ số nổi lên trên cùng -->
 <style>
