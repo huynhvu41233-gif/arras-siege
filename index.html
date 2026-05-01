@@ -93,38 +93,47 @@
                 btn.style.background = "#c0392b";
             }, 2000);
         }
-  </script><div class="info" style="position: relative; z-index: 10; margin-top: 20px;">
-    <p>🛡️ <b>Liên minh:</b> Long, Bảo, Hiếu</p>
+</script>
+<!-- Thêm style này để bảng chỉ số nổi lên trên cùng -->
+<style>
+    .info {
+        position: fixed !important; 
+        top: 10px; 
+        left: 10px; 
+        width: 320px; 
+        z-index: 9999; 
+        background: rgba(45, 52, 70, 0.9); 
+        padding: 10px; 
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+</style>
+
+<div class="info">
+    <p style="color: white; margin: 0 0 10px 0;">🛡️ <b>Liên minh:</b> Long, Bảo, Hiếu</p>
     
-    <div style="background: #2d3436; padding: 12px; border-radius: 8px; margin-bottom: 15px; border: 3px dashed #ff7675; position: relative;">
+    <div style="background: #2d3436; padding: 12px; border-radius: 8px; border: 3px dashed #ff7675; position: relative;">
         <!-- Vạch đỏ sinh tử -->
-        <div style="position: absolute; top: 0; left: 50%; width: 4px; height: 100%; background: #d63031; box-shadow: 0 0 10px #ff7675; z-index: 1;"></div>
+        <div style="position: absolute; top: 0; left: 50%; width: 4px; height: 100%; background: #d63031; box-shadow: 0 0 10px #ff7675;"></div>
         
-        <div id="stats-panel" style="background: #0984e3; color: white; padding: 10px; border-radius: 5px; margin-bottom: 10px; font-size: 13px; text-align: center;">
-            🚀 <b>BẢNG NÂNG CẤP FULL CHỈ SỐ (42 POINTS)</b><br>
-            ⭐ Level: 45 | 📈 Max: <b>9/9</b> mỗi loại
+        <div id="stats-panel" style="background: #0984e3; color: white; padding: 5px; border-radius: 5px; margin-bottom: 10px; font-size: 11px; text-align: center;">
+            🚀 <b>42 POINTS | MAX 9/9</b>
         </div>
         
-        <!-- Bảng 9 cột chỉ số đầy đủ -->
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 11px; color: #dfe6e9; background: rgba(0,0,0,0.5); padding: 12px; border-radius: 5px; position: relative; z-index: 2;">
-            <div>💥 Bullet Damage: <b>9/9</b></div>
-            <div>🏹 Bullet Prep: <b>9/9</b></div>
-            <div>❤️ Bullet Health: <b>...</b></div>
-            <div>⚡ Bullet Speed: <b>9/9</b></div>
-            <div>🩸 Max Health: <b>...</b></div>
-            <div>🧱 Body Damage: <b>9/9</b></div>
-            <div>🔄 Shield Regen: <b>...</b></div>
-            <div>🛡️ Shield Capacity: <b>...</b></div>
-            <div style="grid-column: span 2; color: #ffeaa7; text-align: center; border-top: 1px solid #555; pt-5; mt-5; font-weight: bold;">
-                🏃 MOVEMENT SPEED: <span style="color: #fab1a0;">9/9</span></div>
-
-    <div class="upgrades" style="text-align: left; background: #dfe6e9; padding: 15px; border-radius: 8px; border: 1px solid #b2bec3;">
-        <p style="margin: 0 0 10px 0; font-weight: bold; color: #2d3436;">🛠️ CHIẾN THUẬT VÀ QUY TẮC:</p>
-        <ul style="margin: 0; padding-left: 20px; color: #636e72; font-size: 13px; line-height: 1.5;">
-            <li>🏃 <b>Movement Speed:</b> Max 9/9 để Physician lách qua 50 Boss Wave 10.</li>
-            <li>🚫 <b>Vạch đỏ:</b> Chỉ Physician Level 90+ mới được phép vượt qua để hồi máu Trụ.</li>
-            <li>💀 <b>Giới hạn:</b> Tông tối đa 3 Boss cùng lúc (vượt quá = đăng xuất).</li>
-            <li>👹 <b>Wave 51:</b> 5 Siêu Boss dame cực to, cần tập trung hỏa lực ăn <b>+5 điểm</b>.</li>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5px; font-size: 10px; color: #dfe6e9;">
+            <div>💥 B-Damage: <b>9/9</b></div>
+            <div>🏹 B-Prep: <b>9/9</b></div>
+            <div>⚡ B-Speed: <b>9/9</b></div>
+            <div>🧱 Body Dam: <b>9/9</b></div>
+            <div style="grid-column: span 2; color: #ffeaa7; text-align: center; border-top: 1px solid #555; pt-2;">🏃 SPEED: <b>9/9</b></div>
+        </div>
+    </div>
+</div><div class="upgrades" style="text-align: left; background: #dfe6e9; padding: 10px; border-radius: 8px; border: 1px solid #b2bec3; margin-top: 10px;">
+        <p style="margin: 0 0 5px 0; font-weight: bold; color: #2d3436; font-size: 11px;">🛠️ QUY TẮC CHIẾN ĐẤU:</p>
+        <ul style="margin: 0; padding-left: 15px; color: #636e72; font-size: 10px; line-height: 1.4;">
+            <li>🏃 <b>Movement Speed:</b> Max 9/9 để lách qua 50 Boss.</li>
+            <li>🚫 <b>Vạch đỏ:</b> Chỉ Physician Level 90+ mới được vượt.</li>
+            <li>💀 <b>Giới hạn:</b> Không tông quá 3 Boss cùng lúc.</li>
         </ul>
     </div>
 </div>
@@ -132,32 +141,12 @@
 <script>
 function confirmSelection() {
     const stats = document.getElementById('stats-panel');
-    stats.innerHTML = "✅ ĐÃ CẬP NHẬT FULL BUILD 9/9!<br>Sẵn sàng cùng Long, Bảo, Hiếu quét sạch Singapore 1!";
+    stats.innerHTML = "🎯 ĐÃ KHÓA BUILD 9/9!<br>Sẵn sàng cùng Long, Bảo, Hiếu chiến Wave 51!";
     stats.style.background = "#6c5ce7";
-    alert("Physician chú ý: Chỉ vượt vạch đỏ và hồi máu Trụ khi đạt Level 90!");
+    alert("Physician chú ý: Chỉ vượt vạch đỏ hồi máu Trụ khi đạt Level 90!");
 }
-// Gán sự kiện nhấn vào toàn bộ vùng thông tin để kích hoạt xác nhận
-document.querySelector('.info').addEventListener('click', confirmSelection);</script>
-</body>
-</html>
-            </div>
-        </div>
-    </div>
-
-    <div class="upgrades" style="text-align: left; background: #dfe6e9; padding: 15px; border-radius: 8px; border: 1px solid #b2bec3;">
-        <p style="margin: 0 0 10px 0; font-weight: bold; color: #2d3436;">🛠️ CHIẾN THUẬT TỐC ĐỘ:</p>
-        <ul style="margin: 0; padding-left: 20px; color: #636e72; font-size: 13px; line-height: 1.5;">
-            <li>🏃 <b>Physician (Level 90+):</b> Bắt buộc max 9/9 Speed để kịp chạy về hồi máu Trụ.</li>
-            <li>🚫 <b>Vạch đỏ:</b> Giúp né tránh cái chết khi vô tình chạm vạch đỏ tử thần.</li>
-            <li>👹 <b>Wave 51:</b> Chạy nhanh để không bị 5 siêu Boss dồn vào góc lag.</li>
-        </ul>
-    </div>
-</div>
-
-<script>
-function confirmSelection() {
-    alert("Đã cập nhật Movement Speed! Chúc Admin điều phối Physician cứu bồ thành công!");
-}
+// Kích hoạt khi nhấn vào bảng
+document.querySelector('.info').addEventListener('click', confirmSelection);
 </script>
 </body>
 </html>
